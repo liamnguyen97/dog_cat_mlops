@@ -6,8 +6,20 @@ from airflow.operators.bash import BashOperator
 from airflow.operators.python import ShortCircuitOperator
 from airflow.decorators import task
 from datetime import datetime, timedelta
+from airflow.operators.python_operator import PythonOperator
 import os
+import docker
+def start_gpu_container(**kwargs):
+    client = docker.from_env()
+    response = client.containers.run(
+        'tensorflow/tensorflow:latest-gpu',
+        'nvidia-smi',
+        device_requests=[
+            docker.types.DeviceRequest(count=-1, capabilities=[['gpu']])
+        ]
+    )
 
+    return str(response)
 with DAG(dag_id="tune_dag",
          default_args={
              'owner': 'DongNT17',
@@ -43,8 +55,11 @@ with DAG(dag_id="tune_dag",
     # check_git_task.do_xcom_push = True
 
     # branch_op = branch_func()
-
-
+  
+    start_gpu_container_task = PythonOperator(
+            task_id='start_gpu_container',
+            python_callable=start_gpu_container,
+    )
     create_env_task = BashOperator(
         task_id="create_env_task",
         bash_command=" bash -i /opt/airflow/dags/scripts/create_env.sh ",
@@ -56,7 +71,7 @@ with DAG(dag_id="tune_dag",
         bash_command=" bash -i /opt/airflow/dags/scripts/train.sh ",
         retries=1,
     )
-    create_env_task >> tune_task
+    create_env_task >> start_gpu_container_task >> tune_task
     # deploy_task = BashOperator(
     #     task_id="deploy_task",
     #     bash_command=" bash -i /opt/airflow/dags/scripts/deploy.sh ",

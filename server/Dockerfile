@@ -1,6 +1,12 @@
+# FROM nvidia/cuda:11.0-base
+# RUN apt-get update && apt-get install -y --no-install-recommends \
+#     cuda-cudart-11-0 \
+#     && rm -rf /var/lib/apt/lists/*
+
+# CMD nvidia-smi
+
 FROM apache/airflow:2.6.1-python3.10
 USER root 
-
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
          git zip unzip wget jq\
@@ -23,6 +29,9 @@ RUN wget \
 ENV PATH=$CONDA_DIR/bin:$PATH
 RUN conda init bash
 RUN conda --version
+RUN pip install docker
 USER root
+# FROM nvidia/cuda:10.2-base
+# CMD nvidia-smi
 RUN chmod -R a+rwX /home/airflow/
 USER airflow
