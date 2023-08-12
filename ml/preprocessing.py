@@ -15,8 +15,7 @@ def trainDataset():
                             ]))
     dataloader = torch.utils.data.DataLoader(dataset,
                                             batch_size=batch_size,
-                                            shuffle=True,
-                                            num_workers=4)
+                                            shuffle=True)
     return dataloader                               
 
 def testDataset():
