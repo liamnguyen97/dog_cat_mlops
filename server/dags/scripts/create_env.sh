@@ -28,7 +28,7 @@ fi
 echo "Current working dir: $PWD"
 conda activate training_env
 echo "Need to download db first"
-sudo groupadd docker
-sudo usermod -aG docker $USER
+groupadd docker
+usermod -aG docker $USER
 su -s ${USER}
-sudo systemctl start docker
+systemctl start docker
