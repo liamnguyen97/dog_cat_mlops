@@ -27,22 +27,22 @@ with DAG(dag_id="tune_dag",
          max_active_runs=1,
          ) as dag:
     
-    @task.branch(task_id="branch_task")
-    def branch_func(**kwargs):
-        ti = kwargs['ti']
-        xcom_value = int(ti.xcom_pull(task_ids="check_git_task"))
-        if xcom_value == 0:
-            return "create_env_task"
-        else:
-            return None
+    # @task.branch(task_id="branch_task")
+    # def branch_func(**kwargs):
+    #     ti = kwargs['ti']
+    #     xcom_value = int(ti.xcom_pull(task_ids="check_git_task"))
+    #     if xcom_value == 0:
+    #         return "create_env_task"
+    #     else:
+    #         return None
         
-    check_git_task = BashOperator(
-        task_id="check_git_task",
-        bash_command=" bash -i /opt/airflow/dags/scripts/check_git.sh ",
-    )
-    check_git_task.do_xcom_push = True
+    # check_git_task = BashOperator(
+    #     task_id="check_git_task",
+    #     bash_command=" bash -i /opt/airflow/dags/scripts/check_git.sh ",
+    # )
+    # check_git_task.do_xcom_push = True
 
-    branch_op = branch_func()
+    # branch_op = branch_func()
 
 
     create_env_task = BashOperator(
@@ -56,10 +56,10 @@ with DAG(dag_id="tune_dag",
         bash_command=" bash -i /opt/airflow/dags/scripts/train.sh ",
         retries=1,
     )
-
-    deploy_task = BashOperator(
-        task_id="deploy_task",
-        bash_command=" bash -i /opt/airflow/dags/scripts/deploy.sh ",
-        retries=1,
-    )
-    check_git_task >> branch_op >> create_env_task >> tune_task >> deploy_task
+    create_env_task >> tune_task
+    # deploy_task = BashOperator(
+    #     task_id="deploy_task",
+    #     bash_command=" bash -i /opt/airflow/dags/scripts/deploy.sh ",
+    #     retries=1,
+    # )
+    # check_git_task >> branch_op >> create_env_task >> tune_task >> deploy_task

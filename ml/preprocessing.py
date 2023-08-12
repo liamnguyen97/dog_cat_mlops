@@ -5,7 +5,7 @@ import torch
 batch_size = 64
 
 def trainDataset():
-    dataset = dset.ImageFolder(root="dataset/train",
+    dataset = dset.ImageFolder(root="/opt/airflow/data",
                             transform=transforms.Compose([
                                 transforms.RandomRotation(30),
                                 transforms.RandomHorizontalFlip(),
@@ -28,6 +28,6 @@ def testDataset():
                             ]))
     dataloader = torch.utils.data.DataLoader(dataset,
                                             batch_size=batch_size,
-                                            shuffle=True,
+                                            shuffle=False,
                                             num_workers=4)
     return dataloader
