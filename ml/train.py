@@ -8,18 +8,19 @@ from torch.autograd import Variable
 import torchvision
 from torchvision import models
 import os
-device = torch.device("cuda")
+
+device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 lr = 0.001
 
 train_loader = trainDataset()
 # test_loader = testDataset()
 
-model = models.resnet50().cuda()
+model = models.resnet50().to(device)
 # ########################
 # # model.load_state_dict(torch.load('checkpoint/checpoint_epoch.pt'))
 # # model.eval()
 # ########################
-criterion = nn.CrossEntropyLoss().cuda()
+criterion = nn.CrossEntropyLoss().to(device)
 optimizer = optim.Adam(model.parameters(), lr=lr, weight_decay=1e-5)
 
 def train(epoch):

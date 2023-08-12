@@ -1,0 +1,136 @@
+[2023-08-12T04:33:04.531+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tune_dag.create_env_task manual__2023-08-12T04:32:36.891546+00:00 [queued]>
+[2023-08-12T04:33:04.535+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tune_dag.create_env_task manual__2023-08-12T04:32:36.891546+00:00 [queued]>
+[2023-08-12T04:33:04.535+0000] {taskinstance.py:1308} INFO - Starting attempt 2 of 2
+[2023-08-12T04:33:04.539+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): create_env_task> on 2023-08-12 04:32:36.891546+00:00
+[2023-08-12T04:33:04.544+0000] {standard_task_runner.py:57} INFO - Started process 214 to run task
+[2023-08-12T04:33:04.545+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'tune_dag', 'create_env_task', 'manual__2023-08-12T04:32:36.891546+00:00', '--job-id', '72', '--raw', '--subdir', 'DAGS_FOLDER/scripts/tune_ml.py', '--cfg-path', '/tmp/tmpk4ypfm4y']
+[2023-08-12T04:33:04.546+0000] {standard_task_runner.py:85} INFO - Job 72: Subtask create_env_task
+[2023-08-12T04:33:04.564+0000] {task_command.py:410} INFO - Running <TaskInstance: tune_dag.create_env_task manual__2023-08-12T04:32:36.891546+00:00 [running]> on host 94973c9c953d
+[2023-08-12T04:33:04.593+0000] {taskinstance.py:1545} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='thanhdong18891@gmail.com' AIRFLOW_CTX_DAG_OWNER='DongNT17' AIRFLOW_CTX_DAG_ID='tune_dag' AIRFLOW_CTX_TASK_ID='create_env_task' AIRFLOW_CTX_EXECUTION_DATE='2023-08-12T04:32:36.891546+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-08-12T04:32:36.891546+00:00'
+[2023-08-12T04:33:04.593+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-08-12T04:33:04.594+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', ' bash -i /opt/***/dags/scripts/create_env.sh ']
+[2023-08-12T04:33:04.601+0000] {subprocess.py:86} INFO - Output:
+[2023-08-12T04:33:04.603+0000] {subprocess.py:93} INFO - bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+[2023-08-12T04:33:04.603+0000] {subprocess.py:93} INFO - bash: no job control in this shell
+[2023-08-12T04:33:04.946+0000] {subprocess.py:93} INFO - Debug directory: /home/***
+[2023-08-12T04:33:04.946+0000] {subprocess.py:93} INFO - Current working dir: /home/***
+[2023-08-12T04:33:05.212+0000] {subprocess.py:93} INFO - WARNING: A conda environment already exists at '/home/***/conda/envs/training_env'
+[2023-08-12T04:33:05.212+0000] {subprocess.py:93} INFO - Remove existing environment (y/[n])?
+[2023-08-12T04:33:05.212+0000] {subprocess.py:93} INFO - 
+[2023-08-12T04:33:05.212+0000] {subprocess.py:93} INFO - CondaSystemExit: Exiting.
+[2023-08-12T04:33:05.212+0000] {subprocess.py:93} INFO - 
+[2023-08-12T04:33:05.950+0000] {subprocess.py:93} INFO - # conda environments:
+[2023-08-12T04:33:05.950+0000] {subprocess.py:93} INFO - #
+[2023-08-12T04:33:05.950+0000] {subprocess.py:93} INFO - base                     /home/***/conda
+[2023-08-12T04:33:05.950+0000] {subprocess.py:93} INFO - training_env          *  /home/***/conda/envs/training_env
+[2023-08-12T04:33:05.950+0000] {subprocess.py:93} INFO - 
+[2023-08-12T04:33:07.624+0000] {subprocess.py:93} INFO - Collecting package metadata (current_repodata.json): ...working... done
+[2023-08-12T04:33:07.702+0000] {subprocess.py:93} INFO - Solving environment: ...working... done
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO - 
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO - 
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO - ==> WARNING: A newer version of conda exists. <==
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO -   current version: 23.3.1
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO -   latest version: 23.7.2
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO - 
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO - Please update conda by running
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO - 
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO -     $ conda update -n base -c defaults conda
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO - 
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO - Or to minimize the number of packages updated during conda update use
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO - 
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO -      conda install conda=23.7.2
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO - 
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO - 
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO - 
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO - # All requested packages already installed.
+[2023-08-12T04:33:07.717+0000] {subprocess.py:93} INFO - 
+[2023-08-12T04:33:08.485+0000] {subprocess.py:93} INFO - Collecting pandas (from -r /home/***/dog_cat_mlops/ml/requirements.txt (line 1))
+[2023-08-12T04:33:08.485+0000] {subprocess.py:93} INFO -   Obtaining dependency information for pandas from https://files.pythonhosted.org/packages/d0/28/88b81881c056376254618fad622a5e94b5126db8c61157ea1910cd1c040a/pandas-2.0.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+[2023-08-12T04:33:08.622+0000] {subprocess.py:93} INFO -   Downloading pandas-2.0.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+[2023-08-12T04:33:08.853+0000] {subprocess.py:93} INFO - Collecting numpy (from -r /home/***/dog_cat_mlops/ml/requirements.txt (line 2))
+[2023-08-12T04:33:08.854+0000] {subprocess.py:93} INFO -   Obtaining dependency information for numpy from https://files.pythonhosted.org/packages/32/6a/65dbc57a89078af9ff8bfcd4c0761a50172d90192eaeb1b6f56e5fbf1c3d/numpy-1.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+[2023-08-12T04:33:08.896+0000] {subprocess.py:93} INFO -   Downloading numpy-1.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.6 kB)
+[2023-08-12T04:33:08.972+0000] {subprocess.py:93} INFO - ERROR: Ignored the following versions that require a different python version: 1.21.2 Requires-Python >=3.7,<3.11; 1.21.3 Requires-Python >=3.7,<3.11; 1.21.4 Requires-Python >=3.7,<3.11; 1.21.5 Requires-Python >=3.7,<3.11; 1.21.6 Requires-Python >=3.7,<3.11
+[2023-08-12T04:33:08.972+0000] {subprocess.py:93} INFO - ERROR: Could not find a version that satisfies the requirement torch==1.4.0+cpu (from versions: 1.13.0, 1.13.1, 2.0.0, 2.0.1)
+[2023-08-12T04:33:08.972+0000] {subprocess.py:93} INFO - ERROR: No matching distribution found for torch==1.4.0+cpu
+[2023-08-12T04:33:09.185+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-08-12T04:33:09.190+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-08-12T04:33:09.192+0000] {taskinstance.py:1345} INFO - Marking task as FAILED. dag_id=tune_dag, task_id=create_env_task, execution_date=20230812T043236, start_date=20230812T043304, end_date=20230812T043309
+[2023-08-12T04:33:09.199+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.10/site-packages/***/utils/email.py:152: RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+  send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+
+[2023-08-12T04:33:09.199+0000] {configuration.py:676} WARNING - section/key [smtp/smtp_user] not found in config
+[2023-08-12T04:33:09.199+0000] {email.py:268} INFO - Email alerting: attempt 1
+[2023-08-12T04:33:09.202+0000] {configuration.py:676} WARNING - section/key [smtp/smtp_user] not found in config
+[2023-08-12T04:33:09.202+0000] {email.py:268} INFO - Email alerting: attempt 1
+[2023-08-12T04:33:09.202+0000] {taskinstance.py:1889} ERROR - Failed to send email to: thanhdong18891@gmail.com
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1407, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1558, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1628, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2295, in email_alert
+    send_email(task.email, subject, html_content)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 78, in send_email
+    return backend(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 152, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 270, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 317, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/lib/python3.10/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python3.10/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/lib/python3.10/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/usr/local/lib/python3.10/socket.py", line 845, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/socket.py", line 833, in create_connection
+    sock.connect(sa)
+OSError: [Errno 99] Cannot assign requested address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1887, in handle_failure
+    self.email_alert(error, task)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2297, in email_alert
+    send_email(task.email, subject, html_content_err)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 78, in send_email
+    return backend(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 152, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 270, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 317, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/lib/python3.10/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python3.10/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/lib/python3.10/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/usr/local/lib/python3.10/socket.py", line 845, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/socket.py", line 833, in create_connection
+    sock.connect(sa)
+OSError: [Errno 99] Cannot assign requested address
+[2023-08-12T04:33:09.207+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 72 for task create_env_task (Bash command failed. The command returned a non-zero exit code 1.; 214)
+[2023-08-12T04:33:09.246+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-08-12T04:33:09.268+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check
