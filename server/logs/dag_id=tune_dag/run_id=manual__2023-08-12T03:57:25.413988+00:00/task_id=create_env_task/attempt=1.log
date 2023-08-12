@@ -1,1105 +1,0 @@
-[2023-08-12T03:57:27.023+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tune_dag.create_env_task manual__2023-08-12T03:57:25.413988+00:00 [queued]>
-[2023-08-12T03:57:27.028+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tune_dag.create_env_task manual__2023-08-12T03:57:25.413988+00:00 [queued]>
-[2023-08-12T03:57:27.028+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
-[2023-08-12T03:57:27.033+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): create_env_task> on 2023-08-12 03:57:25.413988+00:00
-[2023-08-12T03:57:27.037+0000] {standard_task_runner.py:57} INFO - Started process 89 to run task
-[2023-08-12T03:57:27.039+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'tune_dag', 'create_env_task', 'manual__2023-08-12T03:57:25.413988+00:00', '--job-id', '63', '--raw', '--subdir', 'DAGS_FOLDER/scripts/tune_ml.py', '--cfg-path', '/tmp/tmp7ecp140_']
-[2023-08-12T03:57:27.040+0000] {standard_task_runner.py:85} INFO - Job 63: Subtask create_env_task
-[2023-08-12T03:57:27.059+0000] {task_command.py:410} INFO - Running <TaskInstance: tune_dag.create_env_task manual__2023-08-12T03:57:25.413988+00:00 [running]> on host 667da7879368
-[2023-08-12T03:57:27.091+0000] {taskinstance.py:1545} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='thanhdong18891@gmail.com' AIRFLOW_CTX_DAG_OWNER='DongNT17' AIRFLOW_CTX_DAG_ID='tune_dag' AIRFLOW_CTX_TASK_ID='create_env_task' AIRFLOW_CTX_EXECUTION_DATE='2023-08-12T03:57:25.413988+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-08-12T03:57:25.413988+00:00'
-[2023-08-12T03:57:27.091+0000] {subprocess.py:63} INFO - Tmp dir root location: 
- /tmp
-[2023-08-12T03:57:27.092+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', ' bash -i /opt/***/dags/scripts/create_env.sh ']
-[2023-08-12T03:57:27.099+0000] {subprocess.py:86} INFO - Output:
-[2023-08-12T03:57:27.100+0000] {subprocess.py:93} INFO - bash: cannot set terminal process group (-1): Inappropriate ioctl for device
-[2023-08-12T03:57:27.100+0000] {subprocess.py:93} INFO - bash: no job control in this shell
-[2023-08-12T03:57:27.449+0000] {subprocess.py:93} INFO - Debug directory: /home/***
-[2023-08-12T03:57:27.450+0000] {subprocess.py:93} INFO - Current working dir: /home/***
-[2023-08-12T03:57:27.450+0000] {subprocess.py:93} INFO - Vo day rui ne
-[2023-08-12T03:57:27.450+0000] {subprocess.py:93} INFO - Cloning into 'dog_cat_mlops'...
-[2023-08-12T03:57:29.030+0000] {subprocess.py:93} INFO - Collecting package metadata (current_repodata.json): ...working... done
-[2023-08-12T03:57:29.033+0000] {subprocess.py:93} INFO - Solving environment: ...working... done
-[2023-08-12T03:57:30.005+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:30.005+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:30.005+0000] {subprocess.py:93} INFO - ==> WARNING: A newer version of conda exists. <==
-[2023-08-12T03:57:30.005+0000] {subprocess.py:93} INFO -   current version: 23.3.1
-[2023-08-12T03:57:30.005+0000] {subprocess.py:93} INFO -   latest version: 23.7.2
-[2023-08-12T03:57:30.005+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:30.005+0000] {subprocess.py:93} INFO - Please update conda by running
-[2023-08-12T03:57:30.005+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:30.005+0000] {subprocess.py:93} INFO -     $ conda update -n base -c defaults conda
-[2023-08-12T03:57:30.005+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:30.005+0000] {subprocess.py:93} INFO - Or to minimize the number of packages updated during conda update use
-[2023-08-12T03:57:30.005+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:30.006+0000] {subprocess.py:93} INFO -      conda install conda=23.7.2
-[2023-08-12T03:57:30.006+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:30.006+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:30.006+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:30.006+0000] {subprocess.py:93} INFO - ## Package Plan ##
-[2023-08-12T03:57:30.006+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:30.006+0000] {subprocess.py:93} INFO -   environment location: /home/***/conda/envs/training_env
-[2023-08-12T03:57:30.006+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:30.006+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:30.006+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:30.006+0000] {subprocess.py:93} INFO - Proceed ([y]/n)?
-[2023-08-12T03:57:30.006+0000] {subprocess.py:93} INFO - Preparing transaction: ...working... done
-[2023-08-12T03:57:30.010+0000] {subprocess.py:93} INFO - Verifying transaction: ...working... done
-[2023-08-12T03:57:30.011+0000] {subprocess.py:93} INFO - Executing transaction: ...working... done
-[2023-08-12T03:57:30.011+0000] {subprocess.py:93} INFO - #
-[2023-08-12T03:57:30.011+0000] {subprocess.py:93} INFO - # To activate this environment, use
-[2023-08-12T03:57:30.011+0000] {subprocess.py:93} INFO - #
-[2023-08-12T03:57:30.011+0000] {subprocess.py:93} INFO - #     $ conda activate training_env
-[2023-08-12T03:57:30.011+0000] {subprocess.py:93} INFO - #
-[2023-08-12T03:57:30.011+0000] {subprocess.py:93} INFO - # To deactivate an active environment, use
-[2023-08-12T03:57:30.011+0000] {subprocess.py:93} INFO - #
-[2023-08-12T03:57:30.011+0000] {subprocess.py:93} INFO - #     $ conda deactivate
-[2023-08-12T03:57:30.011+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:30.822+0000] {subprocess.py:93} INFO - # conda environments:
-[2023-08-12T03:57:30.822+0000] {subprocess.py:93} INFO - #
-[2023-08-12T03:57:30.822+0000] {subprocess.py:93} INFO - base                     /home/***/conda
-[2023-08-12T03:57:30.822+0000] {subprocess.py:93} INFO - training_env          *  /home/***/conda/envs/training_env
-[2023-08-12T03:57:30.822+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.471+0000] {subprocess.py:93} INFO - Collecting package metadata (current_repodata.json): ...working... done
-[2023-08-12T03:57:32.561+0000] {subprocess.py:93} INFO - Solving environment: ...working... done
-[2023-08-12T03:57:32.576+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.576+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.576+0000] {subprocess.py:93} INFO - ==> WARNING: A newer version of conda exists. <==
-[2023-08-12T03:57:32.576+0000] {subprocess.py:93} INFO -   current version: 23.3.1
-[2023-08-12T03:57:32.576+0000] {subprocess.py:93} INFO -   latest version: 23.7.2
-[2023-08-12T03:57:32.576+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.576+0000] {subprocess.py:93} INFO - Please update conda by running
-[2023-08-12T03:57:32.577+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.577+0000] {subprocess.py:93} INFO -     $ conda update -n base -c defaults conda
-[2023-08-12T03:57:32.577+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.577+0000] {subprocess.py:93} INFO - Or to minimize the number of packages updated during conda update use
-[2023-08-12T03:57:32.577+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.577+0000] {subprocess.py:93} INFO -      conda install conda=23.7.2
-[2023-08-12T03:57:32.577+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.577+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO - ## Package Plan ##
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO -   environment location: /home/***/conda/envs/training_env
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO -   added / updated specs:
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO -     - pip
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO - The following packages will be downloaded:
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO -     package                    |            build
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO -     ---------------------------|-----------------
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO -     ca-certificates-2023.05.30 |       h06a4308_0         120 KB
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO -     libffi-3.4.4               |       h6a678d5_0         142 KB
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO -     openssl-3.0.10             |       h7f8727e_0         5.2 MB
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO -     pip-23.2.1                 |  py311h06a4308_0         3.3 MB
-[2023-08-12T03:57:32.587+0000] {subprocess.py:93} INFO -     python-3.11.4              |       h955ad1f_0        32.7 MB
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -     setuptools-68.0.0          |  py311h06a4308_0         1.2 MB
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -     sqlite-3.41.2              |       h5eee18b_0         1.2 MB
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -     wheel-0.38.4               |  py311h06a4308_0          79 KB
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -     xz-5.4.2                   |       h5eee18b_0         642 KB
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -     ------------------------------------------------------------
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -                                            Total:        44.5 MB
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO - The following NEW packages will be INSTALLED:
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   bzip2              pkgs/main/linux-64::bzip2-1.0.8-h7b6447c_0
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   ca-certificates    pkgs/main/linux-64::ca-certificates-2023.05.30-h06a4308_0
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.38-h1181459_1
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   libffi             pkgs/main/linux-64::libffi-3.4.4-h6a678d5_0
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   libgcc-ng          pkgs/main/linux-64::libgcc-ng-11.2.0-h1234567_1
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   libgomp            pkgs/main/linux-64::libgomp-11.2.0-h1234567_1
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-11.2.0-h1234567_1
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   libuuid            pkgs/main/linux-64::libuuid-1.41.5-h5eee18b_0
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   ncurses            pkgs/main/linux-64::ncurses-6.4-h6a678d5_0
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   openssl            pkgs/main/linux-64::openssl-3.0.10-h7f8727e_0
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   pip                pkgs/main/linux-64::pip-23.2.1-py311h06a4308_0
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   python             pkgs/main/linux-64::python-3.11.4-h955ad1f_0
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   readline           pkgs/main/linux-64::readline-8.2-h5eee18b_0
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   setuptools         pkgs/main/linux-64::setuptools-68.0.0-py311h06a4308_0
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   sqlite             pkgs/main/linux-64::sqlite-3.41.2-h5eee18b_0
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   tk                 pkgs/main/linux-64::tk-8.6.12-h1ccaba5_0
-[2023-08-12T03:57:32.588+0000] {subprocess.py:93} INFO -   tzdata             pkgs/main/noarch::tzdata-2023c-h04d1e81_0
-[2023-08-12T03:57:32.589+0000] {subprocess.py:93} INFO -   wheel              pkgs/main/linux-64::wheel-0.38.4-py311h06a4308_0
-[2023-08-12T03:57:32.589+0000] {subprocess.py:93} INFO -   xz                 pkgs/main/linux-64::xz-5.4.2-h5eee18b_0
-[2023-08-12T03:57:32.589+0000] {subprocess.py:93} INFO -   zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_0
-[2023-08-12T03:57:32.589+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.589+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.589+0000] {subprocess.py:93} INFO - Proceed ([y]/n)?
-[2023-08-12T03:57:32.589+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.589+0000] {subprocess.py:93} INFO - Downloading and Extracting Packages
-[2023-08-12T03:57:32.590+0000] {subprocess.py:93} INFO - xz-5.4.2             | 642 KB    |            |   0%
-[2023-08-12T03:57:32.590+0000] {subprocess.py:93} INFO - sqlite-3.41.2        | 1.2 MB    |            |   0% [A
-[2023-08-12T03:57:32.590+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.591+0000] {subprocess.py:93} INFO - libffi-3.4.4         | 142 KB    |            |   0% [A[A
-[2023-08-12T03:57:32.591+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.591+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.592+0000] {subprocess.py:93} INFO - ca-certificates-2023 | 120 KB    |            |   0% [A[A[A
-[2023-08-12T03:57:32.592+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.592+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.592+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.593+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    |            |   0% [A[A[A[A
-[2023-08-12T03:57:32.593+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.593+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.593+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.593+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.593+0000] {subprocess.py:93} INFO - setuptools-68.0.0    | 1.2 MB    |            |   0% [A[A[A[A[A
-[2023-08-12T03:57:32.593+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.593+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.593+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.593+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.593+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.593+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    |            |   0% [A[A[A[A[A[A
-[2023-08-12T03:57:32.593+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.593+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.593+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.594+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.594+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.594+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.594+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   |            |   0% [A[A[A[A[A[A[A
-[2023-08-12T03:57:32.594+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.594+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.594+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.594+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.594+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.594+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.594+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.744+0000] {subprocess.py:93} INFO - wheel-0.38.4         | 79 KB     |            |   0% [A[A[A[A[A[A[A[Axz-5.4.2             | 642 KB    | 2          |   2%
-[2023-08-12T03:57:32.744+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.744+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.744+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.744+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    |            |   0% [A[A[A[A
-[2023-08-12T03:57:32.757+0000] {subprocess.py:93} INFO - sqlite-3.41.2        | 1.2 MB    | 1          |   1% [A
-[2023-08-12T03:57:32.758+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.758+0000] {subprocess.py:93} INFO - libffi-3.4.4         | 142 KB    | #1         |  11% [A[A
-[2023-08-12T03:57:32.758+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.758+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.849+0000] {subprocess.py:93} INFO - ca-certificates-2023 | 120 KB    | #3         |  13% [A[A[Axz-5.4.2             | 642 KB    | ##4        |  25%
-[2023-08-12T03:57:32.852+0000] {subprocess.py:93} INFO - sqlite-3.41.2        | 1.2 MB    | #1         |  12% [A
-[2023-08-12T03:57:32.852+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.852+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.852+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.862+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | 3          |   3% [A[A[A[A
-[2023-08-12T03:57:32.863+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.886+0000] {subprocess.py:93} INFO - libffi-3.4.4         | 142 KB    | #######8   |  79% [A[A
-[2023-08-12T03:57:32.886+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.886+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.897+0000] {subprocess.py:93} INFO - ca-certificates-2023 | 120 KB    | #########3 |  94% [A[A[A
-[2023-08-12T03:57:32.897+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.897+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.924+0000] {subprocess.py:93} INFO - ca-certificates-2023 | 120 KB    | ########## | 100% [A[A[A
-[2023-08-12T03:57:32.924+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.953+0000] {subprocess.py:93} INFO - libffi-3.4.4         | 142 KB    | ########## | 100% [A[Axz-5.4.2             | 642 KB    | #####4     |  55%
-[2023-08-12T03:57:32.959+0000] {subprocess.py:93} INFO - sqlite-3.41.2        | 1.2 MB    | ##5        |  25% [A
-[2023-08-12T03:57:32.959+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.959+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.960+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.992+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | 6          |   6% [A[A[A[A
-[2023-08-12T03:57:32.993+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.993+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.993+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:32.993+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.025+0000] {subprocess.py:93} INFO - setuptools-68.0.0    | 1.2 MB    | 1          |   1% [A[A[A[A[A
-[2023-08-12T03:57:33.026+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.026+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.026+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.026+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.026+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.059+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    |            |   0% [A[A[A[A[A[A
-[2023-08-12T03:57:33.066+0000] {subprocess.py:93} INFO - sqlite-3.41.2        | 1.2 MB    | ###7       |  37% [Axz-5.4.2             | 642 KB    | #######9   |  80%
-[2023-08-12T03:57:33.066+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.066+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.066+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.115+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | 9          |   9% [A[A[A[A
-[2023-08-12T03:57:33.115+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.115+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.115+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.115+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.143+0000] {subprocess.py:93} INFO - setuptools-68.0.0    | 1.2 MB    | 8          |   9% [A[A[A[A[A
-[2023-08-12T03:57:33.143+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.143+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.143+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.143+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.143+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.166+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | 2          |   3% [A[A[A[A[A[Axz-5.4.2             | 642 KB    | ########## | 100%
-[2023-08-12T03:57:33.171+0000] {subprocess.py:93} INFO - sqlite-3.41.2        | 1.2 MB    | #####      |  51% [A
-[2023-08-12T03:57:33.171+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.171+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.171+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.222+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | #2         |  12% [A[A[A[A
-[2023-08-12T03:57:33.222+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.222+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.222+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.222+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.247+0000] {subprocess.py:93} INFO - setuptools-68.0.0    | 1.2 MB    | #9         |  19% [A[A[A[A[A
-[2023-08-12T03:57:33.247+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.247+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.247+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.247+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.247+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.258+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | 6          |   6% [A[A[A[A[A[A
-[2023-08-12T03:57:33.258+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.258+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.258+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.258+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.258+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.258+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.275+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   |            |   0% [A[A[A[A[A[A[A
-[2023-08-12T03:57:33.291+0000] {subprocess.py:93} INFO - sqlite-3.41.2        | 1.2 MB    | ######5    |  65% [A
-[2023-08-12T03:57:33.291+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.291+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.291+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.343+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | #5         |  16% [A[A[A[A
-[2023-08-12T03:57:33.343+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.343+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.343+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.343+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.384+0000] {subprocess.py:93} INFO - setuptools-68.0.0    | 1.2 MB    | ##8        |  28% [A[A[A[A[A
-[2023-08-12T03:57:33.385+0000] {subprocess.py:93} INFO - sqlite-3.41.2        | 1.2 MB    | #######8   |  79% [A
-[2023-08-12T03:57:33.385+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.385+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.385+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.385+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.386+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.386+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.403+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   |            |   1% [A[A[A[A[A[A[A
-[2023-08-12T03:57:33.403+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.403+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.403+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.403+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.403+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.405+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | 9          |  10% [A[A[A[A[A[A
-[2023-08-12T03:57:33.405+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.405+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.405+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.484+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | #9         |  20% [A[A[A[A
-[2023-08-12T03:57:33.485+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.485+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.485+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.485+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.485+0000] {subprocess.py:93} INFO - setuptools-68.0.0    | 1.2 MB    | ###8       |  39% [A[A[A[A[A
-[2023-08-12T03:57:33.503+0000] {subprocess.py:93} INFO - sqlite-3.41.2        | 1.2 MB    | #########  |  91% [A
-[2023-08-12T03:57:33.503+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.503+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.503+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.503+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.503+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.503+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.507+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | 1          |   1% [A[A[A[A[A[A[A
-[2023-08-12T03:57:33.507+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.507+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.507+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.507+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.508+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.516+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | #2         |  12% [A[A[A[A[A[A
-[2023-08-12T03:57:33.516+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.516+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.516+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.587+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | ##2        |  23% [A[A[A[A
-[2023-08-12T03:57:33.587+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.587+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.587+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.587+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.606+0000] {subprocess.py:93} INFO - setuptools-68.0.0    | 1.2 MB    | ####8      |  49% [A[A[A[A[A
-[2023-08-12T03:57:33.607+0000] {subprocess.py:93} INFO - sqlite-3.41.2        | 1.2 MB    | ########## | 100% [A
-[2023-08-12T03:57:33.607+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.607+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.607+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.607+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.607+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.607+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.613+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | 1          |   2% [A[A[A[A[A[A[A
-[2023-08-12T03:57:33.613+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.613+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.613+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.613+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.613+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.633+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | #5         |  16% [A[A[A[A[A[A
-[2023-08-12T03:57:33.634+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.634+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.634+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.689+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | ##5        |  26% [A[A[A[A
-[2023-08-12T03:57:33.689+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.689+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.689+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.689+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.709+0000] {subprocess.py:93} INFO - setuptools-68.0.0    | 1.2 MB    | #####7     |  58% [A[A[A[A[A
-[2023-08-12T03:57:33.710+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.710+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.710+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.710+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.710+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.710+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.733+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | 2          |   2% [A[A[A[A[A[A[A
-[2023-08-12T03:57:33.733+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.733+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.733+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.733+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.733+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.734+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | #9         |  19% [A[A[A[A[A[A
-[2023-08-12T03:57:33.734+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.734+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.734+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.734+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.734+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.734+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.734+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.743+0000] {subprocess.py:93} INFO - wheel-0.38.4         | 79 KB     | ##         |  20% [A[A[A[A[A[A[A[A
-[2023-08-12T03:57:33.743+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.743+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.743+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.776+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | ##8        |  29% [A[A[A[A
-[2023-08-12T03:57:33.776+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.776+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.776+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.776+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.776+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.776+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.776+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.795+0000] {subprocess.py:93} INFO - wheel-0.38.4         | 79 KB     | ########## | 100% [A[A[A[A[A[A[A[A
-[2023-08-12T03:57:33.795+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.795+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.795+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.795+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.819+0000] {subprocess.py:93} INFO - setuptools-68.0.0    | 1.2 MB    | ######6    |  67% [A[A[A[A[A
-[2023-08-12T03:57:33.819+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.819+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.819+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.819+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.819+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.819+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.850+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | 2          |   3% [A[A[A[A[A[A[A
-[2023-08-12T03:57:33.850+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.850+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.850+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.850+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.850+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.853+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | ##2        |  22% [A[A[A[A[A[A
-[2023-08-12T03:57:33.853+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.853+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.853+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.901+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | ###2       |  32% [A[A[A[A
-[2023-08-12T03:57:33.901+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.901+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.901+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.901+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.925+0000] {subprocess.py:93} INFO - setuptools-68.0.0    | 1.2 MB    | #######7   |  77% [A[A[A[A[A
-[2023-08-12T03:57:33.926+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.926+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.926+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.926+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.926+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.926+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.957+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | 3          |   4% [A[A[A[A[A[A[A
-[2023-08-12T03:57:33.957+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.957+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.957+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.957+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.957+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.958+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | ##5        |  26% [A[A[A[A[A[A
-[2023-08-12T03:57:33.958+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.958+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:33.958+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.003+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | ###5       |  35% [A[A[A[A
-[2023-08-12T03:57:34.003+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.003+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.003+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.003+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.032+0000] {subprocess.py:93} INFO - setuptools-68.0.0    | 1.2 MB    | ########7  |  87% [A[A[A[A[A
-[2023-08-12T03:57:34.032+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.032+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.032+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.032+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.032+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.032+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.063+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | 4          |   4% [A[A[A[A[A[A[A
-[2023-08-12T03:57:34.063+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.063+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.063+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.064+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | ###8       |  39% [A[A[A[A
-[2023-08-12T03:57:34.064+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.064+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.064+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.064+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.064+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.107+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | ##9        |  29% [A[A[A[A[A[A
-[2023-08-12T03:57:34.107+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.107+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.107+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.107+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.133+0000] {subprocess.py:93} INFO - setuptools-68.0.0    | 1.2 MB    | #########8 |  99% [A[A[A[A[A
-[2023-08-12T03:57:34.133+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.133+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.133+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.133+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.133+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.133+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.165+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | 4          |   5% [A[A[A[A[A[A[A
-[2023-08-12T03:57:34.165+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.165+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.165+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.174+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | ####2      |  43% [A[A[A[A
-[2023-08-12T03:57:34.174+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.174+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.174+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.174+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.174+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.179+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | ###3       |  33% [A[A[A[A[A[A
-[2023-08-12T03:57:34.180+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.180+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.180+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.180+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.239+0000] {subprocess.py:93} INFO - setuptools-68.0.0    | 1.2 MB    | ########## | 100% [A[A[A[A[A
-[2023-08-12T03:57:34.239+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.239+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.239+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.239+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.239+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.239+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.268+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | 5          |   6% [A[A[A[A[A[A[A
-[2023-08-12T03:57:34.268+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.268+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.268+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.279+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | ####6      |  47% [A[A[A[A
-[2023-08-12T03:57:34.279+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.279+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.279+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.279+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.279+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.345+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | ###7       |  38% [A[A[A[A[A[A
-[2023-08-12T03:57:34.345+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.345+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.345+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.345+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.345+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.345+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.368+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | 6          |   6% [A[A[A[A[A[A[A
-[2023-08-12T03:57:34.368+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.368+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.368+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.381+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | #####1     |  51% [A[A[A[A
-[2023-08-12T03:57:34.381+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.381+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.381+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.381+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.381+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.447+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | ####1      |  41% [A[A[A[A[A[A
-[2023-08-12T03:57:34.447+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.448+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.448+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.448+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.448+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.448+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.470+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | 6          |   7% [A[A[A[A[A[A[A
-[2023-08-12T03:57:34.471+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.471+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.471+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.488+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | #####5     |  56% [A[A[A[A
-[2023-08-12T03:57:34.488+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.488+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.489+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.489+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.489+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.550+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | ####5      |  45% [A[A[A[A[A[A
-[2023-08-12T03:57:34.550+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.550+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.550+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.550+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.550+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.550+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.575+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | 7          |   8% [A[A[A[A[A[A[A
-[2023-08-12T03:57:34.575+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.575+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.575+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.589+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | ######     |  61% [A[A[A[A
-[2023-08-12T03:57:34.589+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.589+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.589+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.590+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.590+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.652+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | ####9      |  49% [A[A[A[A[A[A
-[2023-08-12T03:57:34.652+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.652+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.652+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.652+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.652+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.652+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.677+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | 8          |   8% [A[A[A[A[A[A[A
-[2023-08-12T03:57:34.677+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.677+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.677+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.700+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | ######5    |  66% [A[A[A[A
-[2023-08-12T03:57:34.700+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.700+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.700+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.700+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.700+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.754+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | #####3     |  53% [A[A[A[A[A[A
-[2023-08-12T03:57:34.754+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.754+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.754+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.754+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.754+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.755+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.779+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | 8          |   9% [A[A[A[A[A[A[A
-[2023-08-12T03:57:34.779+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.779+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.779+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.808+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | #######    |  70% [A[A[A[A
-[2023-08-12T03:57:34.808+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.808+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.808+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.808+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.808+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.858+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | #####7     |  58% [A[A[A[A[A[A
-[2023-08-12T03:57:34.858+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.858+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.858+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.858+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.858+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.858+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.884+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | 9          |  10% [A[A[A[A[A[A[A
-[2023-08-12T03:57:34.884+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.884+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.884+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.918+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | #######5   |  75% [A[A[A[A
-[2023-08-12T03:57:34.918+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.918+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.918+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.918+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.919+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.960+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | ######1    |  62% [A[A[A[A[A[A
-[2023-08-12T03:57:34.960+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.961+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.961+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.961+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.961+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.961+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.990+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #          |  10% [A[A[A[A[A[A[A
-[2023-08-12T03:57:34.990+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.990+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:34.990+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.027+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | #######9   |  80% [A[A[A[A
-[2023-08-12T03:57:35.027+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.027+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.027+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.027+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.028+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.067+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | ######6    |  66% [A[A[A[A[A[A
-[2023-08-12T03:57:35.067+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.067+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.067+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.068+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.068+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.068+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.096+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #          |  11% [A[A[A[A[A[A[A
-[2023-08-12T03:57:35.097+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.097+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.097+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.136+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | ########4  |  85% [A[A[A[A
-[2023-08-12T03:57:35.136+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.136+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.136+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.136+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.136+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.174+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | #######1   |  71% [A[A[A[A[A[A
-[2023-08-12T03:57:35.174+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.174+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.174+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.174+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.174+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.174+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.199+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #1         |  12% [A[A[A[A[A[A[A
-[2023-08-12T03:57:35.199+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.199+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.199+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.244+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | ########9  |  90% [A[A[A[A
-[2023-08-12T03:57:35.245+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.245+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.245+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.245+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.245+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.285+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | #######5   |  75% [A[A[A[A[A[A
-[2023-08-12T03:57:35.285+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.285+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.286+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.286+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.286+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.286+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.303+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #2         |  12% [A[A[A[A[A[A[A
-[2023-08-12T03:57:35.303+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.303+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.303+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.349+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | #########4 |  95% [A[A[A[A
-[2023-08-12T03:57:35.349+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.349+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.349+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.349+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.349+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.402+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | #######9   |  80% [A[A[A[A[A[A
-[2023-08-12T03:57:35.402+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.402+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.402+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.402+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.402+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.402+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.408+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #3         |  13% [A[A[A[A[A[A[A
-[2023-08-12T03:57:35.408+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.408+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.408+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.454+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | #########9 | 100% [A[A[A[A
-[2023-08-12T03:57:35.454+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.454+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.454+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.455+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.455+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.455+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | ########5  |  85% [A[A[A[A[A[A
-[2023-08-12T03:57:35.455+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.455+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.455+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.509+0000] {subprocess.py:93} INFO - openssl-3.0.10       | 5.2 MB    | ########## | 100% [A[A[A[A
-[2023-08-12T03:57:35.509+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.509+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.509+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.509+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.509+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.509+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.562+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #4         |  14% [A[A[A[A[A[A[A
-[2023-08-12T03:57:35.562+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.562+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.562+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.562+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.562+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.615+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | #########1 |  91% [A[A[A[A[A[A
-[2023-08-12T03:57:35.615+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.615+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.615+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.615+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.615+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.615+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.668+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #4         |  15% [A[A[A[A[A[A[A
-[2023-08-12T03:57:35.668+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.668+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.668+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.668+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.668+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.719+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | #########6 |  97% [A[A[A[A[A[A
-[2023-08-12T03:57:35.719+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.719+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.719+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.719+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.719+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.719+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.821+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #5         |  16% [A[A[A[A[A[A[A
-[2023-08-12T03:57:35.821+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.821+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.821+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.821+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.821+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.821+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.854+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #6         |  17% [A[A[A[A[A[A[A
-[2023-08-12T03:57:35.854+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.854+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.854+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.854+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.854+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.924+0000] {subprocess.py:93} INFO - pip-23.2.1           | 3.3 MB    | ########## | 100% [A[A[A[A[A[A
-[2023-08-12T03:57:35.924+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.924+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.924+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.924+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.924+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:35.924+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.026+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #7         |  18% [A[A[A[A[A[A[A
-[2023-08-12T03:57:36.026+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.026+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.027+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.027+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.027+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.027+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.128+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #8         |  19% [A[A[A[A[A[A[A
-[2023-08-12T03:57:36.128+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.129+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.129+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.129+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.129+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.129+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.230+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ##         |  21% [A[A[A[A[A[A[A
-[2023-08-12T03:57:36.231+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.231+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.231+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.231+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.231+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.231+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.332+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ##2        |  23% [A[A[A[A[A[A[A
-[2023-08-12T03:57:36.333+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.333+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.333+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.333+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.333+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.333+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.435+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ##4        |  24% [A[A[A[A[A[A[A
-[2023-08-12T03:57:36.435+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.435+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.435+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.435+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.435+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.435+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.537+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ##6        |  26% [A[A[A[A[A[A[A
-[2023-08-12T03:57:36.537+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.537+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.537+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.537+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.537+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.537+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.639+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ##7        |  28% [A[A[A[A[A[A[A
-[2023-08-12T03:57:36.639+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.639+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.639+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.639+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.639+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.639+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.741+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ##9        |  30% [A[A[A[A[A[A[A
-[2023-08-12T03:57:36.741+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.741+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.741+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.741+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.741+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.742+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.843+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ###1       |  32% [A[A[A[A[A[A[A
-[2023-08-12T03:57:36.843+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.843+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.843+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.843+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.843+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.843+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.945+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ###3       |  33% [A[A[A[A[A[A[A
-[2023-08-12T03:57:36.945+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.945+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.945+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.945+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.945+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:36.945+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.047+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ###5       |  35% [A[A[A[A[A[A[A
-[2023-08-12T03:57:37.047+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.047+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.047+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.047+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.047+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.047+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.149+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ###7       |  37% [A[A[A[A[A[A[A
-[2023-08-12T03:57:37.149+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.149+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.149+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.149+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.149+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.149+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.252+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ###8       |  39% [A[A[A[A[A[A[A
-[2023-08-12T03:57:37.252+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.252+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.253+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.253+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.253+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.253+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.353+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ####       |  41% [A[A[A[A[A[A[A
-[2023-08-12T03:57:37.354+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.354+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.354+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.354+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.354+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.354+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.456+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ####2      |  43% [A[A[A[A[A[A[A
-[2023-08-12T03:57:37.456+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.456+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.457+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.457+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.457+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.457+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.558+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ####4      |  44% [A[A[A[A[A[A[A
-[2023-08-12T03:57:37.559+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.559+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.559+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.560+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.560+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.560+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.660+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ####6      |  46% [A[A[A[A[A[A[A
-[2023-08-12T03:57:37.660+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.660+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.660+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.660+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.660+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.660+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.762+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ####7      |  48% [A[A[A[A[A[A[A
-[2023-08-12T03:57:37.763+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.763+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.763+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.764+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.764+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.764+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.864+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ####9      |  50% [A[A[A[A[A[A[A
-[2023-08-12T03:57:37.864+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.864+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.864+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.864+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.864+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.864+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.966+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #####1     |  52% [A[A[A[A[A[A[A
-[2023-08-12T03:57:37.966+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.966+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.966+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.966+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.967+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:37.967+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.069+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #####3     |  53% [A[A[A[A[A[A[A
-[2023-08-12T03:57:38.069+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.069+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.069+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.069+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.069+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.069+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.170+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #####5     |  55% [A[A[A[A[A[A[A
-[2023-08-12T03:57:38.171+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.171+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.171+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.171+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.171+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.171+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.272+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #####7     |  57% [A[A[A[A[A[A[A
-[2023-08-12T03:57:38.273+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.273+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.273+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.273+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.273+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.273+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.375+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #####8     |  59% [A[A[A[A[A[A[A
-[2023-08-12T03:57:38.375+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.375+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.376+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.376+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.376+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.376+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.477+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ######     |  61% [A[A[A[A[A[A[A
-[2023-08-12T03:57:38.477+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.477+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.477+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.477+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.478+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.478+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.579+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ######2    |  63% [A[A[A[A[A[A[A
-[2023-08-12T03:57:38.580+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.580+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.580+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.580+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.580+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.580+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.681+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ######4    |  64% [A[A[A[A[A[A[A
-[2023-08-12T03:57:38.682+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.682+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.682+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.682+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.682+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.682+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.784+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ######6    |  66% [A[A[A[A[A[A[A
-[2023-08-12T03:57:38.784+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.784+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.784+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.785+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.785+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.785+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.885+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ######8    |  68% [A[A[A[A[A[A[A
-[2023-08-12T03:57:38.886+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.886+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.886+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.886+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.886+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.886+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.988+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ######9    |  70% [A[A[A[A[A[A[A
-[2023-08-12T03:57:38.988+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.989+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.989+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.989+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.990+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:38.990+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.090+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #######1   |  72% [A[A[A[A[A[A[A
-[2023-08-12T03:57:39.090+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.090+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.090+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.090+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.090+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.090+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.192+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #######3   |  73% [A[A[A[A[A[A[A
-[2023-08-12T03:57:39.193+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.193+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.193+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.193+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.194+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.194+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.294+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #######5   |  75% [A[A[A[A[A[A[A
-[2023-08-12T03:57:39.294+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.294+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.295+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.295+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.295+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.295+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.396+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #######7   |  77% [A[A[A[A[A[A[A
-[2023-08-12T03:57:39.396+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.396+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.396+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.397+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.397+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.397+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.498+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #######8   |  79% [A[A[A[A[A[A[A
-[2023-08-12T03:57:39.498+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.498+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.499+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.499+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.499+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.499+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.600+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ########   |  81% [A[A[A[A[A[A[A
-[2023-08-12T03:57:39.600+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.600+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.601+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.601+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.601+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.601+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.703+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ########2  |  83% [A[A[A[A[A[A[A
-[2023-08-12T03:57:39.703+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.703+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.703+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.704+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.704+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.704+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.804+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ########4  |  84% [A[A[A[A[A[A[A
-[2023-08-12T03:57:39.805+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.805+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.805+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.805+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.805+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.805+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.907+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ########6  |  86% [A[A[A[A[A[A[A
-[2023-08-12T03:57:39.907+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.907+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.907+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.907+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.907+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:39.907+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.009+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ########8  |  88% [A[A[A[A[A[A[A
-[2023-08-12T03:57:40.009+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.009+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.009+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.009+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.009+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.009+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.111+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ########9  |  90% [A[A[A[A[A[A[A
-[2023-08-12T03:57:40.111+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.111+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.111+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.112+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.112+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.112+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.213+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #########1 |  92% [A[A[A[A[A[A[A
-[2023-08-12T03:57:40.213+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.214+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.214+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.214+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.214+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.214+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.315+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #########3 |  93% [A[A[A[A[A[A[A
-[2023-08-12T03:57:40.315+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.316+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.316+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.316+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.316+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.316+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.417+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #########5 |  95% [A[A[A[A[A[A[A
-[2023-08-12T03:57:40.417+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.418+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.418+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.418+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.418+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.418+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.519+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #########7 |  97% [A[A[A[A[A[A[A
-[2023-08-12T03:57:40.519+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.519+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.519+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.519+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.519+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.519+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.965+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | #########8 |  99% [A[A[A[A[A[A[A
-[2023-08-12T03:57:40.965+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.965+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.965+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.965+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.965+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.965+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.967+0000] {subprocess.py:93} INFO - python-3.11.4        | 32.7 MB   | ########## | 100% [A[A[A[A[A[A[A
-[2023-08-12T03:57:40.967+0000] {subprocess.py:93} INFO -                                                      [A
-[2023-08-12T03:57:40.967+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.967+0000] {subprocess.py:93} INFO -                                                      [A[A
-[2023-08-12T03:57:40.967+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.967+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.967+0000] {subprocess.py:93} INFO -                                                      [A[A[A
-[2023-08-12T03:57:40.967+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.967+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.967+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.967+0000] {subprocess.py:93} INFO -                                                      [A[A[A[A
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO -                                                      [A[A[A[A[A
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO -                                                      [A[A[A[A[A[A
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO -                                                      [A[A[A[A[A[A[A
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.968+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.969+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.969+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.969+0000] {subprocess.py:93} INFO - 
-[2023-08-12T03:57:40.969+0000] {subprocess.py:93} INFO -                                                      [A[A[A[A[A[A[A[A
-[2023-08-12T03:57:41.164+0000] {subprocess.py:93} INFO - Preparing transaction: ...working... done
-[2023-08-12T03:57:41.896+0000] {subprocess.py:93} INFO - Verifying transaction: ...working... done
-[2023-08-12T03:57:45.449+0000] {subprocess.py:93} INFO - Executing transaction: ...working... done
-[2023-08-12T03:57:46.250+0000] {subprocess.py:93} INFO - Collecting pandas (from -r /home/***/dog_cat_mlops/ml/requirements.txt (line 1))
-[2023-08-12T03:57:46.250+0000] {subprocess.py:93} INFO -   Obtaining dependency information for pandas from https://files.pythonhosted.org/packages/d0/28/88b81881c056376254618fad622a5e94b5126db8c61157ea1910cd1c040a/pandas-2.0.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
-[2023-08-12T03:57:46.439+0000] {subprocess.py:93} INFO -   Downloading pandas-2.0.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
-[2023-08-12T03:57:46.656+0000] {subprocess.py:93} INFO - Collecting numpy (from -r /home/***/dog_cat_mlops/ml/requirements.txt (line 2))
-[2023-08-12T03:57:46.656+0000] {subprocess.py:93} INFO -   Obtaining dependency information for numpy from https://files.pythonhosted.org/packages/32/6a/65dbc57a89078af9ff8bfcd4c0761a50172d90192eaeb1b6f56e5fbf1c3d/numpy-1.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
-[2023-08-12T03:57:46.698+0000] {subprocess.py:93} INFO -   Downloading numpy-1.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.6 kB)
-[2023-08-12T03:57:46.778+0000] {subprocess.py:93} INFO - Collecting python-dateutil>=2.8.2 (from pandas->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 1))
-[2023-08-12T03:57:46.819+0000] {subprocess.py:93} INFO -   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
-[2023-08-12T03:57:46.921+0000] {subprocess.py:93} INFO -      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 2.5 MB/s eta 0:00:00
-[2023-08-12T03:57:46.994+0000] {subprocess.py:93} INFO - Collecting pytz>=2020.1 (from pandas->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 1))
-[2023-08-12T03:57:47.035+0000] {subprocess.py:93} INFO -   Downloading pytz-2023.3-py2.py3-none-any.whl (502 kB)
-[2023-08-12T03:57:47.118+0000] {subprocess.py:93} INFO -      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 502.3/502.3 kB 6.1 MB/s eta 0:00:00
-[2023-08-12T03:57:47.165+0000] {subprocess.py:93} INFO - Collecting tzdata>=2022.1 (from pandas->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 1))
-[2023-08-12T03:57:47.205+0000] {subprocess.py:93} INFO -   Downloading tzdata-2023.3-py2.py3-none-any.whl (341 kB)
-[2023-08-12T03:57:47.262+0000] {subprocess.py:93} INFO -      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 341.8/341.8 kB 6.2 MB/s eta 0:00:00
-[2023-08-12T03:57:47.311+0000] {subprocess.py:93} INFO - Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 1))
-[2023-08-12T03:57:47.372+0000] {subprocess.py:93} INFO -   Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
-[2023-08-12T03:57:47.420+0000] {subprocess.py:93} INFO - Downloading pandas-2.0.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.2 MB)
-[2023-08-12T03:57:49.427+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 6.1 MB/s eta 0:00:00
-[2023-08-12T03:57:49.475+0000] {subprocess.py:93} INFO - Downloading numpy-1.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
-[2023-08-12T03:57:52.464+0000] {subprocess.py:93} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 6.1 MB/s eta 0:00:00
-[2023-08-12T03:57:52.584+0000] {subprocess.py:93} INFO - Installing collected packages: pytz, tzdata, six, numpy, python-dateutil, pandas
-[2023-08-12T03:57:55.590+0000] {subprocess.py:93} INFO - Successfully installed numpy-1.25.2 pandas-2.0.3 python-dateutil-2.8.2 pytz-2023.3 six-1.16.0 tzdata-2023.3
-[2023-08-12T03:57:55.783+0000] {subprocess.py:93} INFO - Current working dir: /home/***
-[2023-08-12T03:57:55.953+0000] {subprocess.py:93} INFO - Need to download db first
-[2023-08-12T03:57:55.953+0000] {subprocess.py:97} INFO - Command exited with return code 0
-[2023-08-12T03:57:55.973+0000] {taskinstance.py:1345} INFO - Marking task as SUCCESS. dag_id=tune_dag, task_id=create_env_task, execution_date=20230812T035725, start_date=20230812T035727, end_date=20230812T035755
-[2023-08-12T03:57:56.002+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
-[2023-08-12T03:57:56.024+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check
