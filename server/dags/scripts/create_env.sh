@@ -32,4 +32,4 @@ echo "Need to download db first"
 # groupadd docker
 # usermod -aG docker $USER
 # su -s ${USER}
-systemctl start docker
+# systemctl start docker
