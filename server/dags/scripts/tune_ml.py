@@ -61,10 +61,10 @@ with DAG(dag_id="tune_dag",
          response = client.containers.run(
 
              # The container you wish to call
-             'tensorflow/tensorflow:2.7.0-gpu',
+             'pytorch/pytorch',
 
              # The command to run inside the container
-             'python ../ml/train.py',
+             'python /home/airflow/dog_cat_mlops/ml/train.py',
 
              # Passing the GPU access
              device_requests=[
