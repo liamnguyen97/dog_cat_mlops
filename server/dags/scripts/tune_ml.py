@@ -56,10 +56,36 @@ with DAG(dag_id="tune_dag",
 
     # branch_op = branch_func()
   
-    start_gpu_container_task = PythonOperator(
-            task_id='start_gpu_container',
-            python_callable=start_gpu_container,
-    )
+    # start_gpu_container_task = PythonOperator(
+    #         task_id='start_gpu_container',
+    #         python_callable=start_gpu_container,
+    # )
+
+    @task(task_id='check_gpu')
+    def start_gpu_container(**kwargs):
+
+         # get the docker params from the environment
+         client = docker.from_env()
+          
+         # run the container
+         response = client.containers.run(
+
+             # The container you wish to call
+             'tensorflow/tensorflow:2.7.0-gpu',
+
+             # The command to run inside the container
+             'nvidia-smi',
+
+             # Passing the GPU access
+             device_requests=[
+                 docker.types.DeviceRequest(count=-1, capabilities=[['gpu']])
+             ]
+         )
+
+         return str(response)
+
+    check_gpu = start_gpu_container()
+
     create_env_task = BashOperator(
         task_id="create_env_task",
         bash_command=" bash -i /opt/airflow/dags/scripts/create_env.sh ",
@@ -71,7 +97,7 @@ with DAG(dag_id="tune_dag",
         bash_command=" bash -i /opt/airflow/dags/scripts/train.sh ",
         retries=1,
     )
-    create_env_task >> start_gpu_container_task >> tune_task
+    create_env_task >> check_gpu >> tune_task
     # deploy_task = BashOperator(
     #     task_id="deploy_task",
     #     bash_command=" bash -i /opt/airflow/dags/scripts/deploy.sh ",

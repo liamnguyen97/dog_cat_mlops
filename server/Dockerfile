@@ -1,10 +1,3 @@
-# FROM nvidia/cuda:11.0-base
-# RUN apt-get update && apt-get install -y --no-install-recommends \
-#     cuda-cudart-11-0 \
-#     && rm -rf /var/lib/apt/lists/*
-
-# CMD nvidia-smi
-
 FROM apache/airflow:2.6.1-python3.10
 USER root 
 RUN apt-get update \
