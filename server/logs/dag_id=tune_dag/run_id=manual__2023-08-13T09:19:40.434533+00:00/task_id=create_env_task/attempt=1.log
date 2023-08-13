@@ -1,0 +1,77 @@
+[2023-08-13T09:19:41.081+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tune_dag.create_env_task manual__2023-08-13T09:19:40.434533+00:00 [queued]>
+[2023-08-13T09:19:41.084+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tune_dag.create_env_task manual__2023-08-13T09:19:40.434533+00:00 [queued]>
+[2023-08-13T09:19:41.084+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2023-08-13T09:19:41.096+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): create_env_task> on 2023-08-13 09:19:40.434533+00:00
+[2023-08-13T09:19:41.099+0000] {standard_task_runner.py:57} INFO - Started process 1627 to run task
+[2023-08-13T09:19:41.101+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'tune_dag', 'create_env_task', 'manual__2023-08-13T09:19:40.434533+00:00', '--job-id', '129', '--raw', '--subdir', 'DAGS_FOLDER/scripts/tune_ml.py', '--cfg-path', '/tmp/tmpngw4z8r6']
+[2023-08-13T09:19:41.102+0000] {standard_task_runner.py:85} INFO - Job 129: Subtask create_env_task
+[2023-08-13T09:19:41.119+0000] {task_command.py:410} INFO - Running <TaskInstance: tune_dag.create_env_task manual__2023-08-13T09:19:40.434533+00:00 [running]> on host 30ba972171bc
+[2023-08-13T09:19:41.148+0000] {taskinstance.py:1545} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='thanhdong18891@gmail.com' AIRFLOW_CTX_DAG_OWNER='DongNT17' AIRFLOW_CTX_DAG_ID='tune_dag' AIRFLOW_CTX_TASK_ID='create_env_task' AIRFLOW_CTX_EXECUTION_DATE='2023-08-13T09:19:40.434533+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-08-13T09:19:40.434533+00:00'
+[2023-08-13T09:19:41.149+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-08-13T09:19:41.149+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', ' bash -i /opt/***/dags/scripts/create_env.sh ']
+[2023-08-13T09:19:41.155+0000] {subprocess.py:86} INFO - Output:
+[2023-08-13T09:19:41.156+0000] {subprocess.py:93} INFO - bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+[2023-08-13T09:19:41.156+0000] {subprocess.py:93} INFO - bash: no job control in this shell
+[2023-08-13T09:19:41.496+0000] {subprocess.py:93} INFO - Debug directory: /home/***
+[2023-08-13T09:19:41.496+0000] {subprocess.py:93} INFO - Current working dir: /home/***
+[2023-08-13T09:19:41.775+0000] {subprocess.py:93} INFO - WARNING: A conda environment already exists at '/home/***/conda/envs/training_env'
+[2023-08-13T09:19:41.775+0000] {subprocess.py:93} INFO - Remove existing environment (y/[n])?
+[2023-08-13T09:19:41.775+0000] {subprocess.py:93} INFO - 
+[2023-08-13T09:19:41.775+0000] {subprocess.py:93} INFO - CondaSystemExit: Exiting.
+[2023-08-13T09:19:41.775+0000] {subprocess.py:93} INFO - 
+[2023-08-13T09:19:42.512+0000] {subprocess.py:93} INFO - # conda environments:
+[2023-08-13T09:19:42.512+0000] {subprocess.py:93} INFO - #
+[2023-08-13T09:19:42.512+0000] {subprocess.py:93} INFO - base                     /home/***/conda
+[2023-08-13T09:19:42.512+0000] {subprocess.py:93} INFO - training_env          *  /home/***/conda/envs/training_env
+[2023-08-13T09:19:42.512+0000] {subprocess.py:93} INFO - 
+[2023-08-13T09:19:44.390+0000] {subprocess.py:93} INFO - Collecting package metadata (current_repodata.json): ...working... done
+[2023-08-13T09:19:44.469+0000] {subprocess.py:93} INFO - Solving environment: ...working... done
+[2023-08-13T09:19:44.484+0000] {subprocess.py:93} INFO - 
+[2023-08-13T09:19:44.484+0000] {subprocess.py:93} INFO - 
+[2023-08-13T09:19:44.484+0000] {subprocess.py:93} INFO - ==> WARNING: A newer version of conda exists. <==
+[2023-08-13T09:19:44.484+0000] {subprocess.py:93} INFO -   current version: 23.3.1
+[2023-08-13T09:19:44.485+0000] {subprocess.py:93} INFO -   latest version: 23.7.2
+[2023-08-13T09:19:44.485+0000] {subprocess.py:93} INFO - 
+[2023-08-13T09:19:44.485+0000] {subprocess.py:93} INFO - Please update conda by running
+[2023-08-13T09:19:44.485+0000] {subprocess.py:93} INFO - 
+[2023-08-13T09:19:44.485+0000] {subprocess.py:93} INFO -     $ conda update -n base -c defaults conda
+[2023-08-13T09:19:44.485+0000] {subprocess.py:93} INFO - 
+[2023-08-13T09:19:44.485+0000] {subprocess.py:93} INFO - Or to minimize the number of packages updated during conda update use
+[2023-08-13T09:19:44.485+0000] {subprocess.py:93} INFO - 
+[2023-08-13T09:19:44.485+0000] {subprocess.py:93} INFO -      conda install conda=23.7.2
+[2023-08-13T09:19:44.485+0000] {subprocess.py:93} INFO - 
+[2023-08-13T09:19:44.485+0000] {subprocess.py:93} INFO - 
+[2023-08-13T09:19:44.485+0000] {subprocess.py:93} INFO - 
+[2023-08-13T09:19:44.485+0000] {subprocess.py:93} INFO - # All requested packages already installed.
+[2023-08-13T09:19:44.485+0000] {subprocess.py:93} INFO - 
+[2023-08-13T09:19:44.956+0000] {subprocess.py:93} INFO - Looking in links: https://download.pytorch.org/whl/torch_stable.html
+[2023-08-13T09:19:44.957+0000] {subprocess.py:93} INFO - Requirement already satisfied: pandas in ./conda/envs/training_env/lib/python3.11/site-packages (from -r /home/***/dog_cat_mlops/ml/requirements.txt (line 1)) (2.0.3)
+[2023-08-13T09:19:44.957+0000] {subprocess.py:93} INFO - Requirement already satisfied: numpy in ./conda/envs/training_env/lib/python3.11/site-packages (from -r /home/***/dog_cat_mlops/ml/requirements.txt (line 2)) (1.25.2)
+[2023-08-13T09:19:44.958+0000] {subprocess.py:93} INFO - Requirement already satisfied: torch==2.0.1+cpu in ./conda/envs/training_env/lib/python3.11/site-packages (from -r /home/***/dog_cat_mlops/ml/requirements.txt (line 5)) (2.0.1+cpu)
+[2023-08-13T09:19:44.959+0000] {subprocess.py:93} INFO - Requirement already satisfied: torchvision==0.15.2+cpu in ./conda/envs/training_env/lib/python3.11/site-packages (from -r /home/***/dog_cat_mlops/ml/requirements.txt (line 6)) (0.15.2+cpu)
+[2023-08-13T09:19:44.960+0000] {subprocess.py:93} INFO - Requirement already satisfied: torchmetrics==0.11.4 in ./conda/envs/training_env/lib/python3.11/site-packages (from -r /home/***/dog_cat_mlops/ml/requirements.txt (line 7)) (0.11.4)
+[2023-08-13T09:19:44.963+0000] {subprocess.py:93} INFO - Requirement already satisfied: filelock in ./conda/envs/training_env/lib/python3.11/site-packages (from torch==2.0.1+cpu->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 5)) (3.12.2)
+[2023-08-13T09:19:44.963+0000] {subprocess.py:93} INFO - Requirement already satisfied: typing-extensions in ./conda/envs/training_env/lib/python3.11/site-packages (from torch==2.0.1+cpu->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 5)) (4.7.1)
+[2023-08-13T09:19:44.964+0000] {subprocess.py:93} INFO - Requirement already satisfied: sympy in ./conda/envs/training_env/lib/python3.11/site-packages (from torch==2.0.1+cpu->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 5)) (1.12)
+[2023-08-13T09:19:44.964+0000] {subprocess.py:93} INFO - Requirement already satisfied: networkx in ./conda/envs/training_env/lib/python3.11/site-packages (from torch==2.0.1+cpu->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 5)) (3.1)
+[2023-08-13T09:19:44.964+0000] {subprocess.py:93} INFO - Requirement already satisfied: jinja2 in ./conda/envs/training_env/lib/python3.11/site-packages (from torch==2.0.1+cpu->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 5)) (3.1.2)
+[2023-08-13T09:19:44.967+0000] {subprocess.py:93} INFO - Requirement already satisfied: requests in ./conda/envs/training_env/lib/python3.11/site-packages (from torchvision==0.15.2+cpu->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 6)) (2.31.0)
+[2023-08-13T09:19:44.968+0000] {subprocess.py:93} INFO - Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in ./conda/envs/training_env/lib/python3.11/site-packages (from torchvision==0.15.2+cpu->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 6)) (10.0.0)
+[2023-08-13T09:19:44.995+0000] {subprocess.py:93} INFO - Requirement already satisfied: packaging in ./conda/envs/training_env/lib/python3.11/site-packages (from torchmetrics==0.11.4->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 7)) (23.1)
+[2023-08-13T09:19:45.029+0000] {subprocess.py:93} INFO - Requirement already satisfied: python-dateutil>=2.8.2 in ./conda/envs/training_env/lib/python3.11/site-packages (from pandas->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 1)) (2.8.2)
+[2023-08-13T09:19:45.030+0000] {subprocess.py:93} INFO - Requirement already satisfied: pytz>=2020.1 in ./conda/envs/training_env/lib/python3.11/site-packages (from pandas->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 1)) (2023.3)
+[2023-08-13T09:19:45.030+0000] {subprocess.py:93} INFO - Requirement already satisfied: tzdata>=2022.1 in ./conda/envs/training_env/lib/python3.11/site-packages (from pandas->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 1)) (2023.3)
+[2023-08-13T09:19:45.040+0000] {subprocess.py:93} INFO - Requirement already satisfied: six>=1.5 in ./conda/envs/training_env/lib/python3.11/site-packages (from python-dateutil>=2.8.2->pandas->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 1)) (1.16.0)
+[2023-08-13T09:19:45.049+0000] {subprocess.py:93} INFO - Requirement already satisfied: MarkupSafe>=2.0 in ./conda/envs/training_env/lib/python3.11/site-packages (from jinja2->torch==2.0.1+cpu->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 5)) (2.1.3)
+[2023-08-13T09:19:45.063+0000] {subprocess.py:93} INFO - Requirement already satisfied: charset-normalizer<4,>=2 in ./conda/envs/training_env/lib/python3.11/site-packages (from requests->torchvision==0.15.2+cpu->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 6)) (3.2.0)
+[2023-08-13T09:19:45.064+0000] {subprocess.py:93} INFO - Requirement already satisfied: idna<4,>=2.5 in ./conda/envs/training_env/lib/python3.11/site-packages (from requests->torchvision==0.15.2+cpu->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 6)) (3.4)
+[2023-08-13T09:19:45.064+0000] {subprocess.py:93} INFO - Requirement already satisfied: urllib3<3,>=1.21.1 in ./conda/envs/training_env/lib/python3.11/site-packages (from requests->torchvision==0.15.2+cpu->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 6)) (2.0.4)
+[2023-08-13T09:19:45.065+0000] {subprocess.py:93} INFO - Requirement already satisfied: certifi>=2017.4.17 in ./conda/envs/training_env/lib/python3.11/site-packages (from requests->torchvision==0.15.2+cpu->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 6)) (2023.7.22)
+[2023-08-13T09:19:45.067+0000] {subprocess.py:93} INFO - Requirement already satisfied: mpmath>=0.19 in ./conda/envs/training_env/lib/python3.11/site-packages (from sympy->torch==2.0.1+cpu->-r /home/***/dog_cat_mlops/ml/requirements.txt (line 5)) (1.3.0)
+[2023-08-13T09:19:45.510+0000] {subprocess.py:93} INFO - Current working dir: /home/***
+[2023-08-13T09:19:45.681+0000] {subprocess.py:93} INFO - Need to download db first
+[2023-08-13T09:19:45.682+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-08-13T09:19:45.693+0000] {taskinstance.py:1345} INFO - Marking task as SUCCESS. dag_id=tune_dag, task_id=create_env_task, execution_date=20230813T091940, start_date=20230813T091941, end_date=20230813T091945
+[2023-08-13T09:19:45.723+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-08-13T09:19:45.738+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check

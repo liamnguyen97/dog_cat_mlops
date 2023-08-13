@@ -9,17 +9,7 @@ from datetime import datetime, timedelta
 from airflow.operators.python_operator import PythonOperator
 import os
 import docker
-def start_gpu_container(**kwargs):
-    client = docker.from_env()
-    response = client.containers.run(
-        'tensorflow/tensorflow:latest-gpu',
-        'nvidia-smi',
-        device_requests=[
-            docker.types.DeviceRequest(count=-1, capabilities=[['gpu']])
-        ]
-    )
 
-    return str(response)
 with DAG(dag_id="tune_dag",
          default_args={
              'owner': 'DongNT17',
@@ -74,7 +64,7 @@ with DAG(dag_id="tune_dag",
              'tensorflow/tensorflow:2.7.0-gpu',
 
              # The command to run inside the container
-             'nvidia-smi',
+             'python ../ml/train.py',
 
              # Passing the GPU access
              device_requests=[
@@ -97,7 +87,8 @@ with DAG(dag_id="tune_dag",
         bash_command=" bash -i /opt/airflow/dags/scripts/train.sh ",
         retries=1,
     )
-    create_env_task >> check_gpu >> tune_task
+    create_env_task >> check_gpu
+    # create_env_task >> check_gpu >> tune_task
     # deploy_task = BashOperator(
     #     task_id="deploy_task",
     #     bash_command=" bash -i /opt/airflow/dags/scripts/deploy.sh ",

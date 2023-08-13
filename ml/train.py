@@ -11,7 +11,7 @@ import os
 
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 lr = 0.001
-
+print(device)
 train_loader = trainDataset()
 # test_loader = testDataset()
 

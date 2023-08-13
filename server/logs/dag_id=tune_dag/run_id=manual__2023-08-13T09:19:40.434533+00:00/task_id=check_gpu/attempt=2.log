@@ -1,0 +1,142 @@
+[2023-08-13T09:28:00.777+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tune_dag.check_gpu manual__2023-08-13T09:19:40.434533+00:00 [queued]>
+[2023-08-13T09:28:00.781+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tune_dag.check_gpu manual__2023-08-13T09:19:40.434533+00:00 [queued]>
+[2023-08-13T09:28:00.781+0000] {taskinstance.py:1308} INFO - Starting attempt 2 of 2
+[2023-08-13T09:28:00.786+0000] {taskinstance.py:1327} INFO - Executing <Task(_PythonDecoratedOperator): check_gpu> on 2023-08-13 09:19:40.434533+00:00
+[2023-08-13T09:28:00.791+0000] {standard_task_runner.py:57} INFO - Started process 1833 to run task
+[2023-08-13T09:28:00.792+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'tune_dag', 'check_gpu', 'manual__2023-08-13T09:19:40.434533+00:00', '--job-id', '131', '--raw', '--subdir', 'DAGS_FOLDER/scripts/tune_ml.py', '--cfg-path', '/tmp/tmpz6mzjc__']
+[2023-08-13T09:28:00.793+0000] {standard_task_runner.py:85} INFO - Job 131: Subtask check_gpu
+[2023-08-13T09:28:00.811+0000] {task_command.py:410} INFO - Running <TaskInstance: tune_dag.check_gpu manual__2023-08-13T09:19:40.434533+00:00 [running]> on host 30ba972171bc
+[2023-08-13T09:28:00.840+0000] {taskinstance.py:1545} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='thanhdong18891@gmail.com' AIRFLOW_CTX_DAG_OWNER='DongNT17' AIRFLOW_CTX_DAG_ID='tune_dag' AIRFLOW_CTX_TASK_ID='check_gpu' AIRFLOW_CTX_EXECUTION_DATE='2023-08-13T09:19:40.434533+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-08-13T09:19:40.434533+00:00'
+[2023-08-13T09:28:00.967+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/api/client.py", line 268, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http+docker://localhost/v1.43/containers/9a67cc7dd61a50345aad08bb572138ddbef668aab123eff45baf65d49393041a/start
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 220, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/scripts/tune_ml.py", line 71, in start_gpu_container
+    response = client.containers.run(
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/models/containers.py", line 865, in run
+    container.start()
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/models/containers.py", line 406, in start
+    return self.client.api.start(self.id, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/api/container.py", line 1127, in start
+    self._raise_for_status(res)
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/api/client.py", line 270, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 500 Server Error for http+docker://localhost/v1.43/containers/9a67cc7dd61a50345aad08bb572138ddbef668aab123eff45baf65d49393041a/start: Internal Server Error ("could not select device driver "" with capabilities: [[gpu]]")
+[2023-08-13T09:28:00.973+0000] {taskinstance.py:1345} INFO - Marking task as FAILED. dag_id=tune_dag, task_id=check_gpu, execution_date=20230813T091940, start_date=20230813T092800, end_date=20230813T092800
+[2023-08-13T09:28:00.983+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.10/site-packages/***/utils/email.py:152: RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+  send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+
+[2023-08-13T09:28:00.983+0000] {configuration.py:676} WARNING - section/key [smtp/smtp_user] not found in config
+[2023-08-13T09:28:00.983+0000] {email.py:268} INFO - Email alerting: attempt 1
+[2023-08-13T09:28:00.987+0000] {configuration.py:676} WARNING - section/key [smtp/smtp_user] not found in config
+[2023-08-13T09:28:00.987+0000] {email.py:268} INFO - Email alerting: attempt 1
+[2023-08-13T09:28:00.987+0000] {taskinstance.py:1889} ERROR - Failed to send email to: thanhdong18891@gmail.com
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/api/client.py", line 268, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http+docker://localhost/v1.43/containers/9a67cc7dd61a50345aad08bb572138ddbef668aab123eff45baf65d49393041a/start
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1407, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1558, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1628, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/decorators/base.py", line 220, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/scripts/tune_ml.py", line 71, in start_gpu_container
+    response = client.containers.run(
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/models/containers.py", line 865, in run
+    container.start()
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/models/containers.py", line 406, in start
+    return self.client.api.start(self.id, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/api/container.py", line 1127, in start
+    self._raise_for_status(res)
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/api/client.py", line 270, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+  File "/home/airflow/.local/lib/python3.10/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 500 Server Error for http+docker://localhost/v1.43/containers/9a67cc7dd61a50345aad08bb572138ddbef668aab123eff45baf65d49393041a/start: Internal Server Error ("could not select device driver "" with capabilities: [[gpu]]")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2295, in email_alert
+    send_email(task.email, subject, html_content)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 78, in send_email
+    return backend(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 152, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 270, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 317, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/lib/python3.10/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python3.10/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/lib/python3.10/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/usr/local/lib/python3.10/socket.py", line 845, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/socket.py", line 833, in create_connection
+    sock.connect(sa)
+OSError: [Errno 99] Cannot assign requested address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1887, in handle_failure
+    self.email_alert(error, task)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2297, in email_alert
+    send_email(task.email, subject, html_content_err)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 78, in send_email
+    return backend(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 152, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 270, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 317, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/lib/python3.10/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python3.10/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/lib/python3.10/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/usr/local/lib/python3.10/socket.py", line 845, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/socket.py", line 833, in create_connection
+    sock.connect(sa)
+OSError: [Errno 99] Cannot assign requested address
+[2023-08-13T09:28:00.993+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 131 for task check_gpu (500 Server Error for http+docker://localhost/v1.43/containers/9a67cc7dd61a50345aad08bb572138ddbef668aab123eff45baf65d49393041a/start: Internal Server Error ("could not select device driver "" with capabilities: [[gpu]]"); 1833)
+[2023-08-13T09:28:01.003+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-08-13T09:28:01.014+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check
