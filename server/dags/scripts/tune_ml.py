@@ -64,7 +64,7 @@ with DAG(dag_id="tune_dag",
              'pytorch/pytorch',
 
              # The command to run inside the container
-             'python /home/airflow/dog_cat_mlops/ml/train.py',
+             'python /opt/airflow/ml/train.py',
 
              # Passing the GPU access
              device_requests=[
