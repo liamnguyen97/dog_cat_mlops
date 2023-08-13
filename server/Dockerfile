@@ -1,9 +1,10 @@
-FROM nvidia/cuda:11.0-base
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    cuda-cudart-11-0 \
-    && rm -rf /var/lib/apt/lists/*
+FROM nvidia/cuda:11.4.0-base-ubuntu20.04
+# RUN apt-get update && apt-get install -y --no-install-recommends \
+#     cuda-cudart-11-0 \
+#     && rm -rf /var/lib/apt/lists/*
 
-CMD nvidia-smi
+# CMD nvidia-smi
+RUN pip3 install torch torchvision torchaudio -f https://download.pytorch.org/whl/cu111/torch_stable.html
 
 FROM apache/airflow:2.6.1-python3.10
 USER root 

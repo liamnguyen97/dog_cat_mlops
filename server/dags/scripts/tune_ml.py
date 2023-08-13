@@ -61,10 +61,10 @@ with DAG(dag_id="tune_dag",
          response = client.containers.run(
 
              # The container you wish to call
-             'pytorch/pytorch',
+            #  'pytorch/pytorch',
 
              # The command to run inside the container
-             'python3 ../ml/train.py',
+             'bash -i /opt/airflow/dags/scripts/train.sh',
 
              # Passing the GPU access
              device_requests=[
