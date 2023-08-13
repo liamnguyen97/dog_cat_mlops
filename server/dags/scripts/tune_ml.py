@@ -64,7 +64,7 @@ with DAG(dag_id="tune_dag",
              'pytorch/pytorch',
 
              # The command to run inside the container
-             'python /opt/airflow/ml/train.py',
+             'python3 ../ml/train.py',
 
              # Passing the GPU access
              device_requests=[
